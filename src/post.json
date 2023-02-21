@@ -1,0 +1,8 @@
+ [
+
+  { "id": "1", "message": "Hi, how are you", "likesCount": "7" },
+  { "id": "2", "message": "Ok, and you", "likesCount": "7" },
+  { "id": "3", "message": "Kimi-himi", "likesCount": "4" },
+  { "id": "4", "message": "Yo", "likesCount": "3" },
+  { "id": "5", "message": "Bro", "likesCount": "2" }
+  ]

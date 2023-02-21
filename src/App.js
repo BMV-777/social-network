@@ -9,7 +9,9 @@ import Dialogs from 'components/Dialogs/Dialogs';
 import News from 'components/News/News';
 import Music from 'components/NawBar/Music/Music';
 import Setting from 'components/Setting/Settinge';
-// import Sveta from 'components/Dialogs/User/Sveta';
+
+import post from './post.json';
+import user from './user.json';
 
 const App = () => {
   return (
@@ -18,12 +20,11 @@ const App = () => {
       <NavBar />
       <div className="app-wrapper-content">
         <Routes>
-          <Route path="/dialogs" element={<Dialogs />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/dialogs" element={<Dialogs user={user} />} />
+          <Route path="/profile" element={<Profile post={post} />} />
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/setting" element={<Setting />} />
-          {/* <Route path="/sveta" element={<Sveta />} /> */}
         </Routes>
       </div>
     </div>

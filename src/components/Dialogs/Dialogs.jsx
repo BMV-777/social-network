@@ -1,53 +1,39 @@
 import css from "./Dialogs.module.css";
-import { NavLink } from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
-const DialogItem = (props) => {
+
+
+
+
+const Dialogs = ({user}) => {
   
-  let path = "/dialogs/" + props.id;
+  // let dialogs = [
+  //   { id: '1', name: 'Maks' },
+  //   { id: '2', name: 'Sveta' },
+  //   { id: '3', name: 'Nataha' },
+  //   { id: '4', name: 'Oly' },
+  //   { id: '5', name: 'Vika' },
+  // ];
 
-  return <div className={css.dialog + ' ' + css.active}>
-          <NavLink to={path}>{props.name} </NavLink>
-        </div>
-
-}
-
-const Message = (props) => {
-
-  return <div className={css.message}>{props.message }</div>;
-
-}
-
-const Dialogs = (props) => {
+  // let messages = [
+  //   { id: '1', massage: 'Hi' },
+  //   { id: '2', massage: 'How are you?' },
+  //   { id: '3', massage: 'Yo' },
+  //   { id: '4', massage: 'Yo' },
+  //   { id: '5', massage: 'Bro' },
+  // ];
   
-let dialogsData = [
-  { id: '1', name: 'Maks' },
-  { id: '2', name: 'Sveta' },
-  { id: '3', name: 'Nataha' },
-  { id: '4', name: 'Oly' },
-  { id: '5', name: 'Vika' },
-];
-
-let messageData = [
-  { id: '1', massage: 'Hi' },
-  { id: '2', massage: 'How are you?' },
-  { id: '3', massage: 'Yo' },
-  { id: '4', massage: 'Yo' },
-  { id: '5', massage: 'Bro' },
-];
+  let dialogElement = user.map(d => <DialogItem name={d.name} id={d.id} key={d.id} />)
+  let messageElement = user.map(m => <Message message={m.message} key={m.id} />)
 
   return (
     <div className={css.dialogs}>
       <div className={css.dialogsItems}>
-        <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-        <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-        <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
-        <DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
-        <DialogItem name={dialogsData[4].name} id={dialogsData[4].id} />
+       {dialogElement}
       </div>
       <div className={css.messages}>
-        <Message message={messageData[0].massage} />
-        <Message message={messageData[1].massage} />
-        <Message message={messageData[2].massage} />
+       {messageElement}
       </div>
     </div>
   );

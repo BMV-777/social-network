@@ -3,16 +3,12 @@ import { Post } from './Post/Post';
 
 
 
-const MyPost = () => {
+const MyPost = ({post}) => {
   
-
-const postData = [
-  { id: '1', massage: 'Hi, how are you', likesCount: '7' },
-  { id: '2', massage: 'Ok, and you', likesCount: '5' },
-  { id: '3', massage: 'Kimi-himi', likesCount: '4' },
-  { id: '4', massage: 'Yo', likesCount: '3' },
-  { id: '5', massage: 'Bro', likesCount: '2' },
-];
+  
+  let postElement = post.map(p => (
+    <Post key={p.id} message={p.message} likesCount={p.likesCount} />
+  ));
 
   return (
     <div className={css.postBlock}>
@@ -26,9 +22,7 @@ const postData = [
         </div>
       </div>
       <div className={css.posts}>
-        <Post massage={postData[0].massage} likesCount={postData[0].likesCount} />
-        <Post massage={postData[1].massage} likesCount={postData[1].likesCount} />
-        <Post massage={postData[2].massage} likesCount={postData[2].likesCount} />
+       {postElement}
       </div>
     </div>
   );
