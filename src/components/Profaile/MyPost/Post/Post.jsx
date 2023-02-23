@@ -2,20 +2,24 @@
 
 
 
-const Post = ( props ) => {
+const Post = (props) => {
+    
   return (
     <>
-    
+     
       <div className={css.item}>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYylrIORqVocCKuFL2M1wuFuUr7KTY-rqP_Q&usqp=CAU' alt='avatar' />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYylrIORqVocCKuFL2M1wuFuUr7KTY-rqP_Q&usqp=CAU"
+          alt="avatar"
+        />
         {props.message}
-        
+
         <div>
-         <span> like</span>  {props.likesCount } 
+          <span> like</span> {props.likesCount}
         </div>
-        </div>
+      </div>
     </>
-)
+  );
 
 }
 

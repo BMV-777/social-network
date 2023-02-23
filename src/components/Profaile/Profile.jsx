@@ -4,11 +4,12 @@ import css from './Profile.module.css'
 
 
 
-const Profile = ({post}) => {
+const Profile = (props) => {
+
   return (
     <div className={css}>
-      <ProfileInfo/>
-      <MyPost post ={post} />
+      <ProfileInfo  />
+      <MyPost posts ={props.posts} />
     </div>
   );
 

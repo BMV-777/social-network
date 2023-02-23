@@ -6,7 +6,7 @@ let active = {
 }
 let actives = ({ isActive }) => (isActive ? active : undefined);
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <nav className={css.nav}>
       <div className={css.item}>
@@ -34,6 +34,10 @@ const NavBar = () => {
           Settings
         </NavLink>
       </div>
+      <div>
+       
+      </div>
+     
     </nav>
   );
 

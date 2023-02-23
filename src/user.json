@@ -1,7 +1,22 @@
 [
-    { "id": "1", "name": "Maks",  "message": "Hi"},
-    { "id": "2", "name": "Sveta", "message": "How are you?" },
-    { "id": "3", "name": "Nataha",  "message": "Yo"},
-    { "id": "4", "name": "Oly",  "message": "Yo" },
-    { "id": "5", "name": "Vika",  "message": "Bro" }
-  ]
+  { "id": "1",
+    "name": "Maks",
+    "message": "Hi",
+     "url":"https://pbs.twimg.com/profile_images/1144122570687410176/e9tNbFNq_400x400.png"
+  },
+  {
+    "id": "2",
+    "name": "Sveta",
+    "message": "How are you?",
+    "url": "https://pbs.twimg.com/profile_images/1144122570687410176/e9tNbFNq_400x400.png"
+  },
+  {
+    "id": "3",
+    "name": "Nataha",
+    "message": "Yo",
+    "url": "https://pbs.twimg.com/profile_images/1144122570687410176/e9tNbFNq_400x400.png"
+  }
+
+
+]
+

@@ -10,21 +10,28 @@ import News from 'components/News/News';
 import Music from 'components/NawBar/Music/Music';
 import Setting from 'components/Setting/Settinge';
 
-import post from './post.json';
-import user from './user.json';
+// import post from './post.json';
+// import user from './user.json';
+// import Friends from 'components/Friends/Friends';
 
-const App = () => {
+const App = props => {
   return (
     <div className="app-wrapper">
       <Header />
       <NavBar />
       <div className="app-wrapper-content">
         <Routes>
-          <Route path="/dialogs" element={<Dialogs user={user} />} />
-          <Route path="/profile" element={<Profile post={post} />} />
+          <Route
+            path="/dialogs"
+            element={
+              <Dialogs dialogs={props.dialogs} messages={props.messages} />
+            }
+          />
+          <Route path="/profile" element={<Profile posts={props.posts} />} />
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/setting" element={<Setting />} />
+          {/* <Route path="/friends" element={<Friends />} /> */}
         </Routes>
       </div>
     </div>
@@ -32,3 +39,8 @@ const App = () => {
 };
 
 export default App;
+
+{
+  /* <Route path="/dialogs" element={() => <Dialogs state={props.state.dialogsPages} />} />
+          <Route path="/profile" element={ <Profile state={props.state.profilePages.posts} /> } /> */
+}

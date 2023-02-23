@@ -3,10 +3,10 @@ import { Post } from './Post/Post';
 
 
 
-const MyPost = ({post}) => {
+const MyPost = (props) => {
+
   
-  
-  let postElement = post.map(p => (
+  let postElement =props.posts.map(p => (
     <Post key={p.id} message={p.message} likesCount={p.likesCount} />
   ));
 
