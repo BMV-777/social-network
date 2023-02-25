@@ -23,7 +23,7 @@ const Dialogs = (props) => {
   //   { id: '4', massage: 'Yo' },
   //   { id: '5', massage: 'Bro' },
   // ];
-  
+
   let dialogElement = props.dialogs.map(d => <DialogItem name={d.name} id={d.id} key={d.id} />)
   let messageElement = props.messages.map(m => <Message message={m.message} key={m.id} />)
 

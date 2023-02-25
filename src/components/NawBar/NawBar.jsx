@@ -1,5 +1,6 @@
  import css from './NavBar.module.css';
 import { NavLink } from 'react-router-dom';
+import Friends from 'components/Friends/Friends';
 
 let active = {
    color: 'gold'
@@ -35,9 +36,8 @@ const NavBar = (props) => {
         </NavLink>
       </div>
       <div>
-       
+        <Friends props={props} />
       </div>
-     
     </nav>
   );
 

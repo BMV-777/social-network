@@ -1,5 +1,5 @@
 let state = {
-  profilePages: {
+  profilePage: {
     posts: [
       { id: '1', message: 'Hi, how are you', likesCount: '7' },
       { id: '2', message: 'Ok, and you', likesCount: '7' },
@@ -8,7 +8,7 @@ let state = {
       { id: '5', message: 'Bro', likesCount: '2' },
     ],
   },
-  dialogsPages: {
+  dialogsPage: {
     dialogs: [
       { id: '1', name: 'Maks' },
       { id: '2', name: 'Sveta' },
@@ -22,6 +22,17 @@ let state = {
       { id: '3', message: 'Yo' },
       { id: '4', message: 'Yo' },
       { id: '5', message: 'Bro' },
+    ],
+  },
+  sidebar: {
+    friends: [
+      [
+        { id: '1', name: 'Maks', isOnline: 'false' },
+        { id: '2', name: 'Sveta', isOnline: 'true' },
+        { id: '3', name: 'Nataha', isOnline: 'false' },
+        { id: '4', name: 'Oly', isOnline: 'true' },
+        { id: '5', name: 'Vika', isOnline: 'true' },
+      ],
     ],
   },
 };

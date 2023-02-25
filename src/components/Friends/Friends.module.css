@@ -1,0 +1,9 @@
+.friendsList img {
+  width: 40px;
+}
+
+.friendsItem {
+  display: flex;
+
+  grid-template-columns: 1fr 2fr;
+}
