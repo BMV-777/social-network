@@ -10,11 +10,31 @@ let state = {
   },
   dialogsPage: {
     dialogs: [
-      { id: '1', name: 'Maks' },
-      { id: '2', name: 'Sveta' },
-      { id: '3', name: 'Nataha' },
-      { id: '4', name: 'Oly' },
-      { id: '5', name: 'Vika' },
+      {
+        id: '1',
+        name: 'Maks',
+        url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+      },
+      {
+        id: '2',
+        name: 'Sveta',
+        url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+      },
+      {
+        id: '3',
+        name: 'Nataha',
+        url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+      },
+      {
+        id: '4',
+        name: 'Oly',
+        url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+      },
+      {
+        id: '5',
+        name: 'Vika',
+        url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+      },
     ],
     messages: [
       { id: '1', message: 'Hi' },
@@ -27,11 +47,36 @@ let state = {
   sidebar: {
     friends: [
       [
-        { id: '1', name: 'Maks', isOnline: 'false' },
-        { id: '2', name: 'Sveta', isOnline: 'true' },
-        { id: '3', name: 'Nataha', isOnline: 'false' },
-        { id: '4', name: 'Oly', isOnline: 'true' },
-        { id: '5', name: 'Vika', isOnline: 'true' },
+        {
+          id: '1',
+          name: 'Maks',
+          isOnline: 'true',
+          url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+        },
+        {
+          id: '2',
+          name: 'Sveta',
+          isOnline: 'true',
+          url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+        },
+        {
+          id: '3',
+          name: 'Nataha',
+          isOnline: 'true',
+          url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+        },
+        {
+          id: '4',
+          name: 'Oly',
+          isOnline: 'true',
+          url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+        },
+        {
+          id: '5',
+          name: 'Vika',
+          isOnline: 'true',
+          url: 'https://www.esmagazine.com/ext/resources/whitney-logo-300x248.jpg?1594045477',
+        },
       ],
     ],
   },

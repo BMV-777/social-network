@@ -1,28 +1,42 @@
-import css from './Friends.module.css'
+// import css from './Friends.module.css'
 
-const Friends = (props) => {
- 
+const Friends = ({friends}) => {
+  //  const isOnline = props.props.friends;
+  //  const friends = props.props.friends;
+  // const friends = props.friends;
+  
 
+
+  // let postElement = isOnline.map(f => (
+  //   <div key={f.id}>
+  //     <img src={f.url} alt="" /> <p>{f.name}</p>{' '}
+  //   </div>
+  // ));
   return (
-    <div>
+    
+      <div>
       <h1>Friends</h1>
-      <div className={css.friendsList}>
-        {props && (
-          <div>
-            {props.map(f => (
-              <ul>
-                <li>{f.name}</li>
-              </ul>
-            ))}
-          </div>
-        )}
-        {/* {props.map(f => (
+     
+      {/* {friends.friends.map(f => <div>
+        <p>{f.name}</p>
+      </div>)} */}
+      
+      
+        {/* {friends.map(f =>
+          <ul key={f.id}>
+            <img src={f.url} alt='img' />
+            <h3>{f.name }</h3>
+          </ul>)} */}
+     
+      
+
+      {/* {props.map(f => (
           <div key={f.id} className={css}>
             <img src={f.url} alt='img' />
             <h3>{f.name}</h3>
           </div>
-        ))} */}
-        {/* <img
+        ))} 
+       <img
           src="https://pbs.twimg.com/profile_images/1144122570687410176/e9tNbFNq_400x400.png"
           alt="Sveta"
         />
@@ -51,9 +65,9 @@ const Friends = (props) => {
           alt="Vika"
         />
         Vika
-      </div>   */}
-      </div>
-    </div>
+      </div>  */}
+   </div>
+    
   );
 };
 

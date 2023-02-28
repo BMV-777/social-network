@@ -12,13 +12,14 @@ import Setting from 'components/Setting/Settinge';
 
 // import post from './post.json';
 // import user from './user.json';
-import Friends from 'components/Friends/Friends';
+// import Friends from 'components/Friends/Friends';
 
 const App = props => {
   return (
     <div className="app-wrapper">
       <Header />
-      <NavBar path="/friends" element={<Friends friends={props.friends} />} />
+      <NavBar friends={props.friends} />
+      {/* <NavBar path="/friends" element={<Friends friends={props.friends} />} />  */}
       <div className="app-wrapper-content">
         <Routes>
           <Route

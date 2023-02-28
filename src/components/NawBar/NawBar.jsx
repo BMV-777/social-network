@@ -8,6 +8,7 @@ let active = {
 let actives = ({ isActive }) => (isActive ? active : undefined);
 
 const NavBar = (props) => {
+
   return (
     <nav className={css.nav}>
       <div className={css.item}>
@@ -36,7 +37,8 @@ const NavBar = (props) => {
         </NavLink>
       </div>
       <div>
-        <Friends props={props} />
+        
+        <Friends friends={props} />
       </div>
     </nav>
   );

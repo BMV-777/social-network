@@ -1,0 +1,18 @@
+.image {
+  width: 40px;
+  border-radius: 50px;
+}
+
+.message {
+  color: white;
+}
+
+.imgName {
+  display: grid;
+
+  grid-template-columns: 2fr 10fr;
+}
+
+/* .dialog .active {
+  color: gold;
+} */
