@@ -25,10 +25,24 @@ const App = props => {
           <Route
             path="/dialogs"
             element={
-              <Dialogs dialogs={props.dialogs} messages={props.messages} />
+              <Dialogs
+                dialogs={props.dialogs}
+                messages={props.messages}
+                addPostDialog={props.addPostDialog}
+              />
             }
           />
-          <Route path="/profile" element={<Profile posts={props.posts} />} />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                posts={props.posts}
+                addPost={props.addPost}
+                newPostText={props.newPostText}
+                updatePostText={props.updatePostText}
+              />
+            }
+          />
           <Route path="/news" element={<News />} />
           <Route path="/music" element={<Music />} />
           <Route path="/setting" element={<Setting />} />

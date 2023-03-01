@@ -1,3 +1,5 @@
+import { renderEntireThree } from 'render';
+
 let state = {
   profilePage: {
     posts: [
@@ -7,6 +9,7 @@ let state = {
       { id: '4', message: 'Yo', likesCount: '3' },
       { id: '5', message: 'Bro', likesCount: '2' },
     ],
+    newPostText: 'Ты программист!!!',
   },
   dialogsPage: {
     dialogs: [
@@ -41,7 +44,7 @@ let state = {
       { id: '2', message: 'How are you?' },
       { id: '3', message: 'Yo' },
       { id: '4', message: 'Yo' },
-      { id: '5', message: 'Bro' },
+      { id: '5', message: 'B88' },
     ],
   },
   sidebar: {
@@ -80,6 +83,34 @@ let state = {
       ],
     ],
   },
+};
+window.state = state;
+
+export let addPostDialog = dialogMessages => {
+  let newMessage = {
+    id: 5,
+    message: dialogMessages,
+  };
+
+  state.dialogsPage.messages.push(newMessage);
+  renderEntireThree(state);
+};
+
+export let addPost = () => {
+  let newPost = {
+    id: 5,
+    message: state.profilePage.newPostText,
+    likesCount: 0,
+  };
+
+  state.profilePage.posts.push(newPost);
+  state.profilePage.newPostText = '';
+  renderEntireThree(state);
+};
+
+export let updatePostText = newText => {
+  state.profilePage.newPostText = newText;
+  renderEntireThree(state);
 };
 
 export default state;

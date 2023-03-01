@@ -9,7 +9,8 @@ const Message = (props) => {
   
   let addMessages = () => {
     let text = newMessagePost.current.value;
-    alert(text)
+    props.addPostDialog(text);
+    newMessagePost.current.value = '';
     
   }
 

@@ -25,7 +25,13 @@ const Dialogs = (props) => {
   // ];
 
   let dialogElement = props.dialogs.map(d => <DialogItem name={d.name} id={d.id} key={d.id} url={d.url} />)
-  let messageElement = props.messages.map(m => <Message message={m.message} key={m.id} />)
+  let messageElement = props.messages.map(m => (
+    <Message
+      message={m.message}
+      key={m.id}
+      addPostDialog={props.addPostDialog}
+    />
+  ));
 
   return (
     <div className={css.dialogs}>
