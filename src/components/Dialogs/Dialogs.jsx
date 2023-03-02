@@ -30,6 +30,8 @@ const Dialogs = (props) => {
       message={m.message}
       key={m.id}
       addPostDialog={props.addPostDialog}
+      newMessageText={props.newMessageText}
+      updateMessageText={props.updateMessageText}
     />
   ));
 

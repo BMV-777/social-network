@@ -8,17 +8,24 @@ const Message = (props) => {
   let newMessagePost = useRef()
   
   let addMessages = () => {
+   props.addPostDialog(); 
+  }
+  
+  let onMessageText = () => {
     let text = newMessagePost.current.value;
-    props.addPostDialog(text);
-    newMessagePost.current.value = '';
-    
+    props.updateMessageText(text);
   }
 
   return (
     <div className={css.message}>
       {props.message}
-      <div>
-        <textarea ref={newMessagePost}></textarea>
+      <div className={css.messageBlock}>
+        <textarea
+          //  key={props.id}
+          onChange={onMessageText}
+          ref={newMessagePost}
+          value={props.newMessageText}
+        />
         <div>
           <button onClick={addMessages}>add</button>
         </div>

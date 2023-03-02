@@ -1,6 +1,16 @@
  import css from './NavBar.module.css';
 import { NavLink } from 'react-router-dom';
 import Friends from 'components/Friends/Friends';
+// import styled from '@emotion/styled';
+
+//  const StyledLink = styled(NavLink)`
+//       color: black;
+
+//       &.active {
+//         color: orange;
+//      }
+   
+//  `;
 
 let active = {
    color: 'gold'

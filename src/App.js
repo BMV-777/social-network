@@ -29,6 +29,8 @@ const App = props => {
                 dialogs={props.dialogs}
                 messages={props.messages}
                 addPostDialog={props.addPostDialog}
+                newMessageText={props.newMessageText}
+                updateMessageText={props.updateMessageText}
               />
             }
           />

@@ -16,3 +16,13 @@
 /* .dialog .active {
   color: gold;
 } */
+
+.dialogs {
+  display: flex;
+
+  padding: 15px;
+}
+
+.image {
+  margin-right: 20px;
+}

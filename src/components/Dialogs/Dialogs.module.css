@@ -19,3 +19,11 @@
 .messages {
   padding: 10px;
 }
+
+.messageBlock {
+  padding: 10px;
+}
+
+/* .message{
+ display: flex;
+} */

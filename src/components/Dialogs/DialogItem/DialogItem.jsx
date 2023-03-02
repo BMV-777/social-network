@@ -1,6 +1,16 @@
-// import css from './../Dialogs.module.css';
+//  import css from './../Dialogs.module.css';
+// import styled from 'styled-components';
+// import styled from '@emotion/styled';
 import css from './DialogItem.module.css'
 import { NavLink } from 'react-router-dom';
+
+// const StyledLink = styled(NavLink)`
+//   color: black;
+
+//   &.active {
+//     color: orange;
+//   }
+// `;
 
 const DialogItem = props => {
   let path = `/dialogs/${props.id}`;
@@ -14,7 +24,7 @@ const DialogItem = props => {
       <NavLink to={path} className={css.dialogs}>
         <img src={props.url} className={css.image} alt="img" />
 
-        <div>{props.name}</div>
+        {props.name}
       </NavLink>
     </div>
   );
