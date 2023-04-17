@@ -1,25 +1,25 @@
 
-import { useRef } from 'react';
-import css from './../Dialogs.module.css';
+// import { useRef } from 'react';
+// import css from './../Dialogs.module.css';
 
 
 const Message = (props) => {
   
-  let newMessagePost = useRef()
+  // let newMessagePost = useRef()
   
-  let addMessages = () => {
-   props.addPostDialog(); 
-  }
+  // let addMessages = () => {
+  //  props.addPostDialog(); 
+  // }
   
-  let onMessageText = () => {
-    let text = newMessagePost.current.value;
-    props.updateMessageText(text);
-  }
+  // let onMessageText = () => {
+  //   let text = newMessagePost.current.value;
+  //   props.updateMessageText(text);
+  // }
 
   return (
-    <div className={css.message}>
+    <div className={''}>
       {props.message}
-      <div className={css.messageBlock}>
+      {/* <div className={css.messageBlock}>
         <textarea
           //  key={props.id}
           onChange={onMessageText}
@@ -29,7 +29,7 @@ const Message = (props) => {
         <div>
           <button onClick={addMessages}>add</button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 

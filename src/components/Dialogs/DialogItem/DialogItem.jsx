@@ -22,7 +22,7 @@ const DialogItem = props => {
   return (
     <div className={css.dialogs + ' ' + css.active}>
       <NavLink to={path} className={css.dialogs}>
-        <img src={props.url} className={css.image} alt="img" />
+        {/* <img src={props.url} className={css.image} alt="img" /> */}
 
         {props.name}
       </NavLink>

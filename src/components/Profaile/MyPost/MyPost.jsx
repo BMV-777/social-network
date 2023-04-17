@@ -1,8 +1,9 @@
  import { useRef } from 'react';
 import css from './MyPost.module.css'
 import { Post } from './Post/Post';
+import { addPosts, updateNewPostText } from 'Redux/state';
 
-
+// createRef(); 
 
 const MyPost = (props) => {
 
@@ -12,18 +13,25 @@ const MyPost = (props) => {
   ));
   
   let newPostElement = useRef();
-  
-  let addPost = () => {
  
-    // props.addPost();  
-    props.dispatch = { type: 'ADD-POST' };
+  let addPost = () => {
+//  debugger
+    //  props.addPost();  
+    props.dispatch(addPosts());
+    //  console.log(dispatch)
+
   }
   
+ 
   let onPostChange = () => {
-     let text = newPostElement.current.value;
-    //  props.updatePostText(text);
-    props.dispatch = { type: 'UPDATE-NEW-POST-TEXT', text };
+  
+      let text = newPostElement.current.value;
+      // props.updatePostText(text);
+     let action = ( updateNewPostText(text));
+     props.dispatch(action);
   }
+  
+  
   return (
     <div className={css.postBlock}>
       <h3>My post</h3>

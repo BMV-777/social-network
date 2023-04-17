@@ -33,8 +33,11 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import state from 'Redux/state';
+//  import * as state from 'Redux/state';
 import store from 'Redux/state';
+
+store.dispatch('0987');
+
 // import {
 //   updatePostText,
 //   addPost,
@@ -50,24 +53,24 @@ let renderEntireThree = () => {
     <React.StrictMode>
       <BrowserRouter>
         <App
-          posts={state.profilePage.posts}
-          dialogs={state.dialogsPage.dialogs}
-          messages={state.dialogsPage.messages}
-          friends={state.sidebar.friends}
-          newPostText={state.profilePage.newPostText}
-          newMessageText={state.dialogsPage.newMessageText}
+          posts={store.getState().profilePage.posts}
+          dialogs={store.getState().dialogsPage.dialogs}
+          messages={store.getState().dialogsPage.messages}
+          friends={store.getState().sidebar.friends}
+          newPostText={store.getState().profilePage.newPostText}
+          newMessageText={store.getState().dialogsPage.newMessageText}
           dispatch={store.dispatch.bind(store)}
-          // updatePostText={updatePostText}
-          // addPost={addPost}
-          // addPostDialog={addPostDialog}
-          // updateMessageText={updateMessageText}
+          //  updatePostText={updatePostText}
+          //  addPost={addPost}
+          // addPostDialog={store.addPostDialog}
+          // updateMessageText={store.updateMessageText}
         />
       </BrowserRouter>
     </React.StrictMode>
   );
 };
 
-renderEntireThree(store.getState());
+renderEntireThree();
 store.subscribe(renderEntireThree);
 
 // If you want to start measuring performance in your app, pass a function
@@ -93,3 +96,15 @@ reportWebVitals();
 
 //  renderEntireThree(store.getState());
 //  store.subscribe(renderEntireThree);
+
+//  posts={state.profilePage.posts}
+//           dialogs={state.dialogsPage.dialogs}
+//           messages={state.dialogsPage.messages}
+//           friends={state.sidebar.friends}
+//           newPostText={state.profilePage.newPostText}
+//           newMessageText={state.dialogsPage.newMessageText}
+//           dispatch={store.dispatch.bind(store)}
+//            updatePostText={updatePostText}
+//            addPost={addPost}
+//            addPostDialog={addPostDialog}
+//            updateMessageText={updateMessageText}
