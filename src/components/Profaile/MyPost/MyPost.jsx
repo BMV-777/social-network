@@ -1,14 +1,14 @@
  import { useRef } from 'react';
 import css from './MyPost.module.css'
 import { Post } from './Post/Post';
-import { addPosts, updateNewPostText } from 'Redux/state';
+import { addPosts, updateNewPostText } from 'Redux/profile-reducer';
 
 // createRef(); 
 
 const MyPost = (props) => {
-
+  let posts = props.posts
  
-  let postElement =props.posts.map(p => (
+  let postElement =posts.map(p => (
     <Post key={p.id} message={p.message} likesCount={p.likesCount} />
   ));
   

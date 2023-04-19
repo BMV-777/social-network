@@ -1,7 +1,7 @@
 import css from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import { updateNewMessageCreate, addMessageCreate } from 'Redux/state';
+import { updateNewMessageCreate, addMessageCreate } from 'Redux/dialogs-reducer';
 
 
 
@@ -26,6 +26,7 @@ const Dialogs = (props) => {
   }
   
   let onMessageChange = (e) => {
+    
     let body = e.target.value;
     props.dispatch(updateNewMessageCreate(body));
   

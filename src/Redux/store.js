@@ -263,11 +263,9 @@
 
 //----------------Store--------------//
 
-const ADD_Post = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
-const UPDATE_NEW_MASSAGE_BODY = 'UPDATE_NEW_MASSAGE_BODY';
-const SEND_MESSAGE = 'SEND_MESSAGE';
+import sidebarReducer from './sidebar-reducer';
+import profileReducers from './profile-reducer';
+import dialogsReducer from './dialogs-reducer';
 
 let store = {
   _state: {
@@ -368,8 +366,6 @@ let store = {
     this.renderEntireThree = observer;
   },
 
-  // addPostDialog() {
-
   //   let newMessage = {
   //     id: 1,
   //     message: this._state.dialogsPage.newMessageText,
@@ -390,50 +386,40 @@ let store = {
   //   };
 
   dispatch(action) {
-    if (action.type === ADD_Post) {
-      let newPost = {
-        id: 5,
-        message: this._state.profilePage.newPostText,
-        likesCount: 0,
-      };
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._state.profilePage = profileReducers(this._state.profilePage, action);
+    this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = '';
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state);
-    } else if (action.type === UPDATE_NEW_MASSAGE_BODY) {
-      this._state.dialogsPage.newMessageText = action.body;
-      this._callSubscriber(this._state);
-    } else if (action.type === SEND_MESSAGE) {
-      let body = this._state.dialogsPage.newMessageText;
-      this._state.dialogsPage.newMessageText = '';
-      this._state.dialogsPage.newMessageText.push({ id: 7, message: body });
-      this._callSubscriber(this._state);
-    }
+    this._callSubscriber(this._state);
   },
 };
+// if (action.type === ADD_Post) {
+//   let newPost = {
+//     id: 5,
+//     message: this._state.profilePage.newPostText,
+//     likesCount: 0,
+//   };
 
-export const addPosts = () => ({ type: ADD_Post });
-export const updateNewPostText = text => ({
-  type: UPDATE_NEW_POST_TEXT,
-  newText: text,
-});
-
-export const addMessageCreate = () => ({ type: SEND_MESSAGE });
-export const updateNewMessageCreate = body => ({
-  type: UPDATE_NEW_MASSAGE_BODY,
-  body: body,
-});
-
-// updatePostText(newText) {
-//   this._state.profilePage.newPostText = newText;
+//   this._state.profilePage.posts.push(newPost);
+//   this._state.profilePage.newPostText = '';
 //   this._callSubscriber(this._state);
-// },
+// } else if (action.type === UPDATE_NEW_POST_TEXT) {
+//   this._state.profilePage.newPostText = action.newText;
+//   this._callSubscriber(this._state);
+//     } else if (action.type === UPDATE_NEW_MASSAGE_BODY) {
+//       this._state.dialogsPage.newMessageText = action.body;
+//       this._callSubscriber(this._state);
+//     } else if (action.type === SEND_MESSAGE) {
+//       let body = this._state.dialogsPage.newMessageText;
+//       this._state.dialogsPage.newMessageText = '';
+//       this._state.dialogsPage.newMessageText.push({ id: 7, message: body });
+//       this._callSubscriber(this._state);
+//     }
+//   },
+// };
 
 export default store;
-// window.store = store;
+window.store = store;
 
 ///-----обьединили в dispatch-------/
 // updateMessageText(newText) {
@@ -456,4 +442,3 @@ export default store;
 //   this._state.profilePage.newPostText = newText;
 //   this._callSubscriber(this._state);
 // },
-//-------------------------///
