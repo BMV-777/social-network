@@ -47,8 +47,8 @@ import store from 'Redux/redux-store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <BrowserRouter>
-//     <Provider store={store}>
-//       <App />
+//     <Provider>
+//       <App store={store} dispatch={store.dispatch.bind(store)} state={state} />
 //     </Provider>
 //   </BrowserRouter>
 // );
@@ -58,6 +58,9 @@ let renderEntireThree = () => {
     <React.StrictMode>
       <BrowserRouter>
         <App
+          // store={store}
+          // dispatch={store.dispatch.bind(store)}
+          // state={state}
           posts={store.getState().profilePage.posts}
           dialogs={store.getState().dialogsPage.dialogs}
           messages={store.getState().dialogsPage.messages}

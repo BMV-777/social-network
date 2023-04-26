@@ -1,4 +1,4 @@
- import { MyPost } from './MyPost/MyPost';
+ import MyPost  from './MyPost/MyPost';
 import ProfileInfo from './PfofileInfo/ProfileInfo';
 import css from './Profile.module.css'
 

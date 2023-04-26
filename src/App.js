@@ -26,6 +26,7 @@ const App = props => {
             path="/dialogs"
             element={
               <Dialogs
+                //  state={props.state.dialogsPage}
                 dispatch={props.dispatch}
                 dialogs={props.dialogs}
                 messages={props.messages}
@@ -39,6 +40,7 @@ const App = props => {
             path="/profile"
             element={
               <Profile
+                profilePage={props.profilePage}
                 dispatch={props.dispatch}
                 posts={props.posts}
                 // addPost={props.addPost}

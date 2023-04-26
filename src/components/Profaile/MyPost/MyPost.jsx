@@ -53,4 +53,4 @@ const MyPost = (props) => {
 
 }
 
-export { MyPost};
+export default MyPost;

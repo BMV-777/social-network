@@ -1,4 +1,4 @@
-const ADD_Post = 'ADD-POST';
+const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 let initialState = {
@@ -14,7 +14,7 @@ let initialState = {
 
 const profileReducers = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_Post:
+    case ADD_POST:
       let newPost = {
         id: 5,
         message: state.newPostText,
@@ -32,7 +32,7 @@ const profileReducers = (state = initialState, action) => {
   }
 };
 
-export const addPosts = () => ({ type: ADD_Post });
+export const addPosts = () => ({ type: ADD_POST });
 export const updateNewPostText = text => ({
   type: UPDATE_NEW_POST_TEXT,
   newText: text,
